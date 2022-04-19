@@ -7,11 +7,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Abstract
 {
-    // Car Tablosnunun Veri erişim katmanı (Data access layer)
-    // Ekle sil güncelle getir gibi operasyonlar
-    public interface ICarDal:IEntityRepository<Car>
+    public interface IColorDal:IEntityRepository<Color>
     {
-      
-
     }
 }
