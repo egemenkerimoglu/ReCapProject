@@ -13,17 +13,35 @@ namespace ConsoleUI
 
             foreach (var car in carManager.GetAll())
             {
-                Console.WriteLine("Id : "+ car.Id + "Açıklama : " + car.Description + " Model : " + car.ModelYear + " Renk :" + car.Id);
+                Console.WriteLine("Id : " + car.Id + "Açıklama : " + car.Description + " Model : " + car.ModelYear + " Renk :" + car.Id);
             }
 
+            //CarTest(carManager);
+            // CarGetByBrandTest(carManager);
+            // CatGetByColorTest(carManager);
+        }
+
+        private static void CatGetByColorTest(CarManager carManager)
+        {
+            foreach (var car in carManager.GetCarsByColorId(1))
+            {
+                Console.WriteLine("Rengi 1  * Beyaz olna araçalar " + car.Description);
+            }
+        }
+
+        private static void CarGetByBrandTest(CarManager carManager)
+        {
             foreach (var car in carManager.GetCarsByBrandId(1))
             {
                 Console.WriteLine("Markası 1 Olan Arabalar :" + car.Description);
             }
+        }
 
-            foreach(var car in carManager.GetCarsByColorId(1))
+        private static void CarTest(CarManager carManager)
+        {
+            foreach (var car in carManager.GetAll())
             {
-                Console.WriteLine("Rengi 1  * Beyaz olna araçalar " + car.Description);
+                Console.WriteLine("Id : " + car.Id + "Açıklama : " + car.Description + " Model : " + car.ModelYear + " Renk :" + car.Id);
             }
         }
     }

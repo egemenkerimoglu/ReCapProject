@@ -9,9 +9,9 @@ namespace Business.Abstract
 {
     public interface ICarService
     {
-        List<Car> GetAll();
+        List<Car> GetAll();// tüm arabaları listeler
+        Car GetById(int carId); // cartını getir
         List<Car> GetCarsByBrandId(int id);// Markasına göre getir
-
         List<Car> GetCarsByColorId(int id); // Rengine göre getir
 
        
